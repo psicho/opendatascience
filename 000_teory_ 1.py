@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 df = pd.read_csv('telecom.csv')
-# print(df.head()) # Выводим 5 первых строк таблицы
+print(df.head()) # Выводим 5 первых строк таблицы
 # print(df.shape) # Посмотрим на размер данных. Размерность таблицы n х m
 # print(df.columns) # Выведем названия столбцов
 # print(df.info()) # Общая информация по датафрейму и всем признакам
@@ -153,7 +153,7 @@ df = pd.read_csv('telecom.csv')
 # Посмотрим, как отток связан с признаком "Подключение международного роуминга" (International plan).
 # Сделаем это с помощью сводной таблички crosstab, а также путем иллюстрации с Seaborn (как именно
 # строить такие картинки и анализировать с их помощью графики – материал следующей статьи).
-print(pd.crosstab(df['Churn'], df['International plan'], margins=True))
+print(pd.crosstab(df['churn'], df['international plan'], margins=True))
 
 # f =  open('output.txt', 'w')
 # f.close()
